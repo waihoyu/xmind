@@ -4,7 +4,6 @@ var fruit = function fruit() {
   name: 'fruit'
 }
 
-
 fruit.prototype.sellFruit = function (model) {
   var fruitTest = null;
   switch (model) {
@@ -39,7 +38,7 @@ var banana = function () {
 
 banana.prototype.theSize = function () {
   console.log('the size of  banana');
-}
+} 
 var test = new fruit();
 test.sellFruit('banana');
 
