@@ -64,7 +64,16 @@ Speedster.prototype = {
         console.log('Speedster providerRepair');
     }
 }
-
+// Bicycle.prototype.assemble = function assemble() {
+//     console.log('Speedster assemble');
+// }
+// Bicycle.prototype.wash = function wash() {
+//     console.log('Speedster wash');
+// }
+// Bicycle.prototype.providerRepair = function providerRepair() {
+//     console.log('Speedster providerRepair');
+// }
+//
 var Giant = function () {
     console.log(Giant);
 }
@@ -80,6 +89,15 @@ Giant.prototype = {
         console.log('Giant providerRepair');
     }
 }
+// Giant.prototype.assemble = function assemble() {
+//     console.log('Giant assemble');
+// }
+// Giant.prototype.wash = function wash() {
+//     console.log('Giant wash');
+// }
+// Giant.prototype.providerRepair = function providerRepair() {
+//     console.log('Giant providerRepair');
+// }
 
 var YouTu = function () {
 
