@@ -10,9 +10,9 @@ var choir = [];
 
 var duck = {
     name: '鸭王',
-    actor:'任达华',
-    duckSinging: function(){
-        console.log('嘎嘎嘎');   
+    actor: '任达华',
+    duckSinging: function () {
+        console.log('嘎嘎嘎');
     }
 }
 
@@ -22,16 +22,29 @@ var duck = {
 var yyj = {
     name: 'wxy',
     hasGirlFriend: false,
-    birth:'5-23',
-    girlAttributes:{
+    birth: '5-23',
+    girlAttributes: {
         age: 11,
         tall: 160,
-        hair:'black',
+        hair: 'black',
     }
 }
 
 var chicken = {
+    duckSinging: function(){
+        
+    }
 
+
+}
+
+function joinChoir(ani) {
+    if (ani && typeof ani.duckSinging == 'function') {
+        choir.push(ani);
+    }
+    else {
+        console.log('不符合要求');
+    }
 }
 
 for (let index = 0; index < 100; index++) {
@@ -40,10 +53,21 @@ for (let index = 0; index < 100; index++) {
     // const element = array[index];
 }
 
-choir.push(chicken);
+joinChoir(chicken);
+//choir.push(chicken);
 
-choir.push(yyj);
+//choir.push(yyj);
+joinChoir(yyj);
 
 console.log(choir[100]);
 
 console.log(choir[101]);
+
+for (let index = 0; index < choir.length; index++) {
+    const element = choir[index];
+    console.log(element);
+    // if (!element.duckSinging) {
+    //     console.log('不是鸭子');
+    //     break;
+    // }
+}
