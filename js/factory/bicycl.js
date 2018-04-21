@@ -36,28 +36,52 @@ Bicycle.prototype = {
             default:
                 break;
         }
+        bicycle.assemble1();
+        bicycle.wash2();
+        bicycle.providerRepair3();
         console.log('卖车了');
         return bicycle;
         // 卖车，  商店  很多的车  维修人员  仓库人员
         //面向对象们;
     }
 }
+
+
+
 //雷速达
 var Speedster = function () {
     console.log('Speedster');
 
 }
 Speedster.prototype = {
-
+    assemble1: function assemble() {
+        console.log('Speedster assemble');
+    },
+    wash2: function wash() {
+        console.log('Speedster wash');
+    },
+    providerRepair3: function providerRepair() {
+        console.log('Speedster providerRepair');
+    }
 }
-//
+
 var Giant = function () {
     console.log(Giant);
 }
-Giant.prototype = {
 
+Giant.prototype = {
+    assemble1: function assemble() {
+        console.log('Giant assemble');
+    },
+    wash2: function wash() {
+        console.log('Giant wash');
+    },
+    providerRepair3: function providerRepair() {
+        console.log('Giant providerRepair');
+    }
 }
-var YouTu = function(){
+
+var YouTu = function () {
 
 }
 YouTu.prototype = {
@@ -67,5 +91,6 @@ YouTu.prototype = {
 
 var bicycle = new Bicycle('永久');
 
-//console.log(bicycle.sellBicycle());
-console.log(Giant);
+console.log(bicycle.sellBicycle('Giant'));
+// console.log(Giant);
+
