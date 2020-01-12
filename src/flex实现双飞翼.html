@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                display: flex;
+                height: 100vh;
+                flex-direction: column;
+            }
+            header {
+                background: #000;
+            }
+            section {
+                flex: 1;
+                background: pink;
+                display: flex;
+            }
+            footer {
+                background: #000;
+            }
+            .left {
+                background: red;
+                flex: 0 0 100px;
+            }
+            .center {
+                flex: 1;
+                background: blue;
+            }
+            .right {
+                flex: 0 0 100px;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>头部</header>
+            <section>
+                <div class="left">左</div>
+                <div class="center">中</div>
+                <div class="right">右</div>
+            </section>
+            <footer>底部</footer>
+        </div>
+    </body>
+</html>

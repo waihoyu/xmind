@@ -1,0 +1,26 @@
+{
+    "name": "xmind",
+    "version": "1.0.0",
+    "description": "项目练习  记录自己学习JavaScript全栈过程 -",
+    "main": "webpack.config.js",
+    "dependencies": {},
+    "devDependencies": {
+        "loader-utils": "^1.2.3",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "b": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/waihoyu/xmind.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/waihoyu/xmind/issues"
+    },
+    "homepage": "https://github.com/waihoyu/xmind#readme"
+}

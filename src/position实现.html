@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                color: black;
+                font-size: 45px;
+            }
+            .main div {
+                box-sizing: border-box;
+            }
+            .main {
+                width: 100%;
+                background: red;
+                position: relative;
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+            .center {
+                width: 100%;
+                background: pink;
+            }
+            .left {
+                background: yellow;
+                width: 200px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .right {
+                background: blue;
+                width: 200px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="center">z中间</div>
+            <div class="left">左</div>
+            <div class="right">右</div>
+        </div>
+    </body>
+</html>
