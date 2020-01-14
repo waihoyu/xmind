@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            .main {
+                width: 200px;
+                height: 3000px;
+                background-color: red;
+                float: left;
+                opacity: 0.1;
+            }
+            .child {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                float: left;
+                opacity: 0.1;
+            }
+            .left {
+                width: 100%;
+                height: 300px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            右边
+            <div class="child">11</div>
+        </div>
+        <div class="left">
+            左边
+        </div>
+        <script>
+            console.log(document.documentURI);
+            console.log(document.documentElement);
+            console.log(document.head);
+            window.addEventListener('scroll', function() {
+                console.log(11);
+            });
+            Promise.all([
+                new Promise((resolve, reject) => {
+                    setTimeout(function() {
+                        resolve('res1');
+                    }, 1000);
+                }).then(x => {
+                    console.log(x);
+                }),
+                new Promise((resolve, reject) => {
+                    setTimeout(function() {
+                        resolve('res2');
+                    }, 1000);
+                }).then(x => {
+                    console.log(x);
+                }),
+            ]).then(results => {
+                console.log(results); //这是上面两个返回的数组
+            });
+        </script>
+    </body>
+</html>
