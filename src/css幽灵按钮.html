@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            body {
+                background: #666;
+            }
+            .button-group {
+                width: 300px;
+                height: 50px;
+                background-color: mediumblue;
+                text-align: center;
+                line-height: 50px;
+                position: relative;
+            }
+            .button-border-top {
+                height: 10px;
+                width: 0px;
+                background-color: white;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .button-border-bottom {
+                height: 10px;
+                width: 0px;
+                background-color: white;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            .button-group a {
+                text-decoration: none;
+                color: rgb(150, 107, 107);
+                font: bold 20px Arial;
+            }
+            .button-group:hover .button-border-top {
+                transition: 0.3s;
+                width: 100%;
+            }
+            .button-group:hover .button-border-bottom {
+                transition: 0.3s;
+                transform: rotate(45deg);
+                width: 100%;
+            }
+            .main2 {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="button-group">
+                <div class="button-border-top"></div>
+                <a href="javascript:;">HTML</a>
+                <div class="button-border-bottom"></div>
+            </div>
+        </div>
+        <div class="main2"></div>
+        <script></script>
+    </body>
+</html>

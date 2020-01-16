@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            .main {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border: solid 2px orange;
+                /* top: 100px; */
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main"></div>
+        <!-- <script>
+            function loadImage(src, resolve, reject) {
+                let image = new Image();
+                image.src = src;
+                image.onload = resolve(image);
+                image.onerror = reject;
+            }
+            loadImage(
+                './images/1.jpg',
+                image => {
+                    document.body.appendChild(image);
+                    console.log('图片加载完成');
+                },
+                () => {
+                    console.log('图片加载失败');
+                }
+            );
+            console.log('异步编程');
+        </script> -->
+
+        <script>
+            function interval(callback, delay) {
+                let id = setInterval(() => {
+                    callback(id);
+                }, interval);
+            }
+            interval(id => {
+                const div = document.querySelector('div');
+                let left = parseInt(window.getComputedStyle(div).left);
+                div.style.left = left + 1 + 'px';
+                div.style.backgroundColor = 'blue';
+                console.log(div.style.left);
+            }, 100);
+        </script>
+    </body>
+</html>

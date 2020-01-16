@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            article {
+                background-color: rgba(255, 0, 0, 0.5);
+                height: 500px;
+                border: dashed 3px black;
+                padding: 30px;
+                background-clip: padding-box;
+                background-attachment: scroll;
+                background-position: center;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h2>zixue.com</h2>
+        </article>
+        <script>
+            function timeout(delay = 100) {
+                return new Promise(resolve => setTimeout(resolve, delay));
+            }
+            timeout(2000)
+                .then(() => {
+                    console.log('houdunren.com');
+                    return timeout(2000);
+                })
+                .then(() => {
+                    console.log('zixue.com');
+                });
+            let div = document.querySelector('h2');
+            let h2 = window.getComputedStyle(div);
+            console.log(div);
+            console.log(h2);
+            let newDiv = document.createElement('div');
+            newDiv.innerHTML = '123';
+            document.body.appendChild(newDiv);
+            let interval = setInterval(() => {
+                console.log('111');
+            }, 200);
+            setTimeout(() => {
+                clearInterval(interval);
+            }, 2000);
+        </script>
+    </body>
+</html>
